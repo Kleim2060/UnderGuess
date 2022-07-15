@@ -1,0 +1,368 @@
+/*Font*/
+@font-face {
+  font-family: 'undertaleFont';
+  src: url('../font/undertaleFont/DeterminationMonoRUSBYLYAJK.eot');
+  src: url('../font/undertaleFont/DeterminationMonoRUSBYLYAJK.eot?#iefix') format('embedded-opentype'),
+       url('../font/undertaleFont/DeterminationMonoRUSBYLYAJK.svg#DeterminationMonoRUSBYLYAJK') format('svg'),
+       url('../font/undertaleFont/DeterminationMonoRUSBYLYAJK.ttf') format('truetype'),
+       url('../font/undertaleFont/DeterminationMonoRUSBYLYAJK.woff') format('woff'),
+       url('../font/undertaleFont/DeterminationMonoRUSBYLYAJK.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+p{
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    cursor: url("../image/cursor.png"), auto;
+}
+
+body{
+    background-color: #000;
+    font-size: 2.4rem;
+    font-family: undertaleFont;
+    color: #fff;
+    overflow: hidden;
+}
+
+.wrapper{
+    position: relative;
+}
+
+.point,
+.record{
+    display: flex;
+    position: fixed;
+}
+
+.point{
+    top: 2rem;
+    left: 2rem;
+}
+
+.record{
+    top: 5rem;
+    left: 2rem;
+}
+
+.btn{
+    color: #D17636;
+    border: 3px solid #D17636;
+    background-color: #000;
+    font-family: undertaleFont;
+    font-size: 3.6rem;
+    text-decoration: none;
+    margin-bottom: 1rem;
+
+    padding: 1rem 2rem;
+    cursor: url("../image/cursor__point.png"), auto;
+    transition: all .2s linear;
+}
+
+.btn:active{
+    font-size: 3.2rem;
+}
+
+/*Audio*/
+.audio__mute{
+    float: right;
+    right: 11rem;
+    top: 2rem;
+
+    background: url("../image/audio_play.png") no-repeat;
+    background-size: cover;
+    width: 90px;
+    height: 90px;
+    font-size: 0px;
+    cursor: url("../image/cursor__point.png"), auto;
+}
+
+.audio__mute--false{
+    opacity: .8;
+}
+
+.audio__mute--true{
+     display: none;
+ }
+
+/*Person*/
+.person{
+    position: fixed;
+    bottom: 2rem;
+    left: 10rem;
+
+    background-size: cover;
+    width: 200px;
+}
+
+.diolog__text{
+    position: fixed;
+    bottom: 24rem;
+    left: 6rem;
+    background-color: #ffffff;
+    color: #000;
+    font-size: 1.8rem;
+    padding: 1rem;
+
+}
+
+/*Intro*/
+.intro{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 70vh;
+    transition: all .5s linear;
+}
+
+.intro.active{
+    transform: scale(0);
+    height: 0;
+}
+
+.intro__suptitle{
+    font-size: 3.6rem;
+}
+
+.intro__title{
+    font-size: 4.8rem;
+}
+
+/*Rules*/
+.rules{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+
+    transition: all .5s linear;
+
+    transform: scale(0);
+    height: 0;
+}
+
+.rules.active{
+    transform: scale(1);
+    width: auto;
+    height: 90vh;
+}
+
+/*Section*/
+.section__title{
+    font-size: 3.6rem;
+    margin-bottom: 2rem;
+}
+
+.section__title--values{
+    display: flex;
+    justify-content: center;
+}
+
+/*Information*/
+.information{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 750px;
+    margin: 0 auto;
+
+    transition: all .5s linear;
+
+    transform: scale(0);
+    height: 0;
+}
+
+.information.active{
+    transform: scale(1);
+    width: auto;
+    height: 90vh;
+}
+
+.information__rules{
+    margin-bottom: 2rem;
+}
+
+/*Level*/
+.choose__level{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 750px;
+    margin: 0 auto;
+
+    transition: all .5s linear;
+
+    transform: scale(0);
+    width: 0;
+    height: 0;
+}
+
+.choose__level.active{
+    transform: scale(1);
+    width: auto;
+    height: 90vh;
+}
+
+/*Game*/
+.game{
+    display: none;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+
+    transition: all .5s linear;
+}
+
+.game.active{
+    display: flex;
+    height: 90vh;
+}
+
+/*Choose Level*/
+
+.choose__level--start{
+    display: none;
+}
+
+.choose__level--start.active{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.choose__level--text{
+    display: flex;
+    margin: 2rem 0;
+}
+
+/*Enemy*/
+.enemy{
+    background-size: cover;
+    width: 250px;
+    margin-bottom: 3rem;
+    transition: filter .2s linear;
+}
+
+.enemy.active{
+    filter: brightness(.5);
+}
+
+/*User Value*/
+.user__value{
+    display: flex;
+    justify-content: space-between;
+
+    min-width: 550px;
+}
+
+.user__value--input{
+    font-family: 'undertaleFont';
+    background-color: #000;
+    color: #ffffff;
+    border: 3px solid #ffffff;
+
+    width: 300px;
+    height: 63px;
+    font-size: 3.2rem;
+}
+
+.user__value--input:focus-visible{
+    outline: 0;
+}
+
+/*Logic Currents*/
+.hp__current{
+    display: flex;
+    justify-content: space-between;
+    min-width: 140px;
+    position: absolute;
+    bottom: 5rem;
+    left: 5rem;
+}
+
+.counter__try,
+.max__value,
+.point__current,
+.record__current{
+    margin: 0 .9rem;
+}
+
+/*Coordinate*/
+.coordinate{
+    display: flex;
+    justify-content: space-between;
+    transform: scale(0);
+
+    border: 3px solid #ffff;
+    margin-top: 1rem;
+}
+
+.coordinate.active{
+    transform: scale(1);
+}
+
+.coordinate--warm{
+    border-left: 3px solid #fff;
+}
+
+.coordinate--help,
+.coordinate--warm{
+    padding: 1rem;
+}
+
+/*Popup*/
+.popup{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 500px;
+    height: 250px;
+
+    transform: scale(0);
+    background-color: #000;
+    border: 3px solid #D17636;
+    transition: all .5s linear;
+}
+
+.popup.show{
+    transform: scale(1);
+}
+
+.popup__inner{
+
+}
+
+.popup__title{
+    display: flex;
+    justify-content: center;
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn__reload{
+    margin-top: 1.5rem;
+    width: fit-content;
+}
+
+.result__battle{
+    margin: 0 .5rem;
+}

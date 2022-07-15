@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>UnderGuess</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="image/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="font/undertaleFont/font.css">
+</head>
+<body>
+
+    <!--Music-->
+    <audio class="music" id="music__menu" src="audio/menu.mp3"  muted="true"></audio>
+    <audio class="music" id="music__lose" src="audio/lose.mp3"  muted="true"></audio>
+    <audio class="music" id="music__won" src="audio/won.mp3"  muted="true"></audio>
+    <audio class="music" id="music__match" src="audio/battle.mp3"  muted="true"></audio>
+
+    <div class="wrapper">
+
+        <input class="audio__mute audio__mute--false" type="button"/>
+        <input class="audio__mute audio__mute--true" type="button"/>
+
+        <div class="person">
+            <img class="person person__papyrus" src="image/papyrus.gif" alt="">
+            <div class="diolog">
+                <div class="diolog__text papyrus__intro">Привет! Я Папирус, ты хочешь сыграть в одну игру?</div>
+            </div>
+        </div>
+
+        <div class="record">Рекорд: <div class="record__current">0</div></div>
+
+        <div class="intro">
+            <h2 class="intro__suptitle">Игра:</h2>
+            <h1 class="intro__title">Угадай число!</h1>
+            <a class="btn btn__start">Начать!</a>
+        </div>
+
+        <div class="rules">
+            <div class="section__title">Правила:</div>
+            <div class="buttons">
+                <button class="btn btn__rules--true">Я знаю</button>
+                <button class="btn btn__rules--false">Я не знаю</button>
+            </div>
+        </div>
+
+        <div class="information">
+            <div class="section__title">Правила:</div>
+            <p class="information__rules">В этой игре тебе надо угадать число, которое сгинерирует нейросеть. Ты можешь набрать число, после чего тебе скажут это число больше или меньше числа, которого ты должен угадать. От уровня сложности, тебе будет выдано несколько попыток, а так же диопозон чисел.</p>
+            <button class="btn btn__rules--true">Я понял</button>
+        </div>
+
+        <div class="choose__level">
+            <div class="buttons">
+                <div class="section__title">Выбери уровень:</div>
+                <button class="btn btn__choose--level" type="button">Супер Легкий</button>
+                <button class="btn btn__choose--level" type="button">Легкий</button>
+                <button class="btn btn__choose--level" type="button">Средний</button>
+                <button class="btn btn__choose--level" type="button">Сложный</button>
+                <button class="btn btn__choose--level" type="button">Невозможный</button>
+            </div>
+            <div class="choose__level--start">
+                <div class="choose__level--text">Попыток: <div class="counter__try">0</div>, диопозон от 0 до <div class="max__value">5</div></div>
+                <input class="btn btn__start--level" type="button" onclick="gameMusic.muted=false" value="Начать!" />
+            </div>
+
+        </div>
+        <div class="game">
+            <img class="enemy" alt="">
+            <div class="section__title">Набери число <div class="section__title--values"> от 0 до <div class="max__value">5</div>:</div></div>
+            <div class="user__value">
+                <input class="user__value--input">
+                <button class="btn btn__send">Отправить</button>
+            </div>
+            <div class="hp__current">
+                У тебя: <div class="hp__value">0</div>
+                <img src="image/cursor.png" alt="">
+            </div>
+            <div class="coordinate">
+                <div class="coordinate--help">больше</div>
+                <div class="coordinate--warm">холодно</div>
+            </div>
+            <div class="popup">
+                    <div class="popup__title">Вы <div class="result__battle">выиграли</div>!</div>
+                    <div class="popup__suptitle">Хотите еще раз?</div>
+                    <button class="btn btn__reload">Играть еще раз</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
